@@ -1,8 +1,6 @@
-const mongoose = require('mongoose');
 const geometryModel = require('./../models/geometryModel');
 const geometryMunModel = require('./../models/geometryMunModel');
 const statisticModelMun = require('./../models/statisticModelMun');
-const { default: Axios } = require('axios');
 
 exports.getGeometryByDepartmentIndex = async (req, res) => {
   try {
