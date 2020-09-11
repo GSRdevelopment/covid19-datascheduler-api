@@ -14,15 +14,15 @@ A node server API that gathers daily statistic and geospatial data of the COVID-
 
 (**GET**) Getting statistics of **ALL** departments from an especific date (yyyy-mm-dd):
 
-- https://covid19-datascheduler-api.herokuapp.com/api/v1/statistics/department/*yyyy-mm-dd*/
+- https://covid19-datascheduler-api.herokuapp.com/api/v1/statistics/department/[yyyy-mm-dd]
 
 (**GET**) Getting statistics of an **especific department** (name) in an especific date (yyyy-mm-dd):
 
-- https://covid19-datascheduler-api.herokuapp.com/api/v1/statistics/department/*yyyy-mm-dd*/*name-of-the-department*
+- https://covid19-datascheduler-api.herokuapp.com/api/v1/statistics/department/[yyyy-mm-dd]/[name-of-the-department]
 
 (**GET**) Getting geospatial data from an **especific department** (index):
 
-- https://covid19-datascheduler-api.herokuapp.com/api/v1/geometry/d/*index*
+- https://covid19-datascheduler-api.herokuapp.com/api/v1/geometry/d/[index]
 
 (**GET**) Getting **ALL** geospatial data from the departments (Sorted alphabetically by index):
 
@@ -32,15 +32,15 @@ A node server API that gathers daily statistic and geospatial data of the COVID-
 
 (**GET**) Getting statistics of **ALL** municipalities from an especific date (yyyy-mm-dd):
 
-- https://covid19-datascheduler-api.herokuapp.com/api/v1/statistics/municipality/*yyyy-mm-dd*/
+- https://covid19-datascheduler-api.herokuapp.com/api/v1/statistics/municipality/[yyyy-mm-dd]/
 
 (**GET**) Getting statistics of an **especific department** (name) in an especific date (yyyy-mm-dd):
 
-- https://covid19-datascheduler-api.herokuapp.com/api/v1/statistics/municipality/*yyyy-mm-dd*/*name-of-the-municipality*
+- https://covid19-datascheduler-api.herokuapp.com/api/v1/statistics/municipality/[yyyy-mm-dd]/[name-of-the-municipality]
 
 (**GET**) Getting geospatial data from an **especific department** (index):
 
-- https://covid19-datascheduler-api.herokuapp.com/api/v1/geometry/m/*index*
+- https://covid19-datascheduler-api.herokuapp.com/api/v1/geometry/m/[index]
 
 (**GET**) Getting **ALL** geospatial data from the departments (Sorted alphabetically by index):
 
