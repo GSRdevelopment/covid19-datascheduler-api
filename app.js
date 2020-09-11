@@ -3,6 +3,7 @@ const cors = require('cors');
 const testRouter = require('./routes/testRoutes');
 const statisticRouter = require('./routes/statisticRoutes');
 const geometryRouter = require('./routes/geometryRouter');
+const scheduleRouter = require('./routes/scheduleRouter');
 
 const app = express();
 
@@ -19,6 +20,8 @@ app.get('/', (req, res) => {
 app.use('/api/v1/statistics', statisticRouter);
 
 app.use('/api/v1/geometry', geometryRouter);
+
+app.use('/api/v1/schedule', scheduleRouter);
 
 app.use('/api/test', testRouter);
 
