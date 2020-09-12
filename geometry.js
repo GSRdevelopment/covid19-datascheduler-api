@@ -15,14 +15,14 @@ const write = async () => {
 
   for (let i = 0; i < data.length; i++) {
     delete data[i].properties;
-    data[i].features = {
-      ...data.features,
+    data[i] = {
+      ...data[i].geometry,
       index: i,
       municipality: municipality[i].DPTO_CNMBR,
     };
   }
 
-  await fs.writeFile('./geometry.js', JSON.stringify(data.features), () => {
+  await fs.writeFile('./geometry.json', JSON.stringify(data.features), () => {
     console.log('geometry.js file created!');
   });
 };
