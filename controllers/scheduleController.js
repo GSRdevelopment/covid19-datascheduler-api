@@ -19,7 +19,7 @@ exports.dailyUpdateDep = async () => {
     }
 
     await axios.post(
-      'https://covid19-data-scheduler-api.herokuapp.com/api/v1/statistics/department',
+      'https://covid19-datascheduler-api.herokuapp.com/api/v1/statistics/department',
       data
     );
   } catch (err) {
@@ -42,7 +42,7 @@ exports.dailyUpdateMun = async () => {
     }
 
     await axios.post(
-      'https://covid19-data-scheduler-api.herokuapp.com/api/v1/statistics/municipality',
+      'https://covid19-datascheduler-api.herokuapp.com/api/v1/statistics/municipality',
       request.data.data
     );
   } catch (err) {
