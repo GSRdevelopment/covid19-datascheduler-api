@@ -4,7 +4,6 @@ const statisticModelMun = require('./../models/statisticModelMun');
 
 exports.createStatistic = async (req, res) => {
   try {
-    console.log(req.body);
     let data = req.body;
     let daily = new statisticModel.DailyData();
 
