@@ -18,6 +18,8 @@ exports.dailyUpdateDep = async () => {
       };
     }
 
+    //endpoint
+
     await axios.post(
       'https://covid19-datascheduler-api.herokuapp.com/api/v1/statistics/department',
       data
@@ -40,6 +42,8 @@ exports.dailyUpdateMun = async () => {
         index: i,
       };
     }
+
+    //endpoint
 
     await axios.post(
       'https://covid19-datascheduler-api.herokuapp.com/api/v1/statistics/municipality',
