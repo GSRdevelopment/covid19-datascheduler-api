@@ -8,6 +8,8 @@ exports.createStatistic = async (req, res) => {
     let data = req.body;
     let daily = new statisticModel.DailyData();
 
+    console.log(req.body);
+
     for (let i = 0; i < data.length; i++) {
       daily.dailyData.push(data[i]);
     }
