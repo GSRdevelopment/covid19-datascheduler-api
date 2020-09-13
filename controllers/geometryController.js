@@ -71,7 +71,7 @@ exports.getGeometryByMunicipalityIndex = async (req, res) => {
 exports.getMunicipalityGeometryByDepartment = async (req, res) => {
   try {
     const data = await geometryMunModel.GeometryDataMun.find({
-      department: req.paramas.department.toUpperCase(),
+      department: req.params.department.toUpperCase(),
     });
 
     res.status(200).json({
