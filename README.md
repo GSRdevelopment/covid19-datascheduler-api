@@ -34,15 +34,19 @@ A node server API that gathers daily statistic and geospatial data of the COVID-
 
 - https://covid19-datascheduler-api.herokuapp.com/api/v1/statistics/municipality/[yyyy-mm-dd]/
 
-(**GET**) Getting statistics of an **especific department** (name) in an especific date (yyyy-mm-dd):
+(**GET**) Getting statistics of an **especific municipality** (name) in an especific date (yyyy-mm-dd):
 
 - https://covid19-datascheduler-api.herokuapp.com/api/v1/statistics/municipality/[yyyy-mm-dd]/[name-of-the-municipality]
 
-(**GET**) Getting geospatial data from an **especific department** (index):
+(**GET**) Getting geospatial data from an **especific municipality** (index):
 
 - https://covid19-datascheduler-api.herokuapp.com/api/v1/geometry/m/[index]
 
-(**GET**) Getting **ALL** geospatial data from the departments (Sorted alphabetically by index):
+(**GET**) Getting **ALL** geospatial data from the municipality by their department (Sorted alphabetically by index):
+
+- https://covid19-datascheduler-api.herokuapp.com/api/v1/geometry/md/[department-name]
+
+(**GET**) Getting **ALL** geospatial data from the municipality (Sorted alphabetically by index):
 
 - https://covid19-datascheduler-api.herokuapp.com/api/v1/geometry/m/all
 
