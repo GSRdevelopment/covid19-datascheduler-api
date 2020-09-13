@@ -3,8 +3,9 @@ const mongoose = require('mongoose');
 const geometrySchemaMun = mongoose.Schema(
   {
     type: String,
-    geometry: [Array],
+    coordinates: [Array],
     index: Number,
+    department: String,
   },
   { collection: 'geometrydatamuns' }
 );

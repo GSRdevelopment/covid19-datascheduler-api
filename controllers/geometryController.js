@@ -70,32 +70,13 @@ exports.getGeometryByMunicipalityIndex = async (req, res) => {
 
 exports.getMunicipalityGeometryByDepartment = async (req, res) => {
   try {
-    const preData = await statisticModelMun.DailyDataMun.findOne();
-
-    let reqData = [];
-
-    for (let i = 0; i < preData.dailyDataMun.length; i++) {
-      if (preData.dailyDataMun[i].DPTO_CNMBR === 'ANTIOQUIA') {
-        reqData.push({
-          property: preData.dailyDataMun[i],
-          geometry: undefined,
-        });
-      }
-    }
-
-    console.log(reqData);
-
-    for (let i = 0; i < reqData.length; i++) {
-      let temp = await geometryMunModel.GeometryDataMun.findOne({
-        index: reqData[i].property.index,
-      });
-      console.log(i);
-      reqData[i].geometry = temp.geometry;
-    }
+    const data = await geometryMunModel.GeometryDataMun.find({
+      department: req.paramas.department.toUpperCase(),
+    });
 
     res.status(200).json({
       status: 'success',
-      data: reqData,
+      data: data,
     });
   } catch (err) {
     res.status(404).json({
